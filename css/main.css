@@ -11,14 +11,23 @@ html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
   box-sizing: border-box;
+  font: normal 100%/1.3 sans-serif;
 }
 
 *, *::before, *::after {
   box-sizing: inherit;
 }
+img {
+  display: block;
+  width: 100%;
+}
+
+body {
+  display: block;
+}
 
 .dino-wrap{
-  display: block;
+  display: inline-block;
   width: 100%;
 }
 
@@ -27,14 +36,53 @@ html {
 }
 
 @media only screen and (min-width: 25em) {
+  html {
+     font-size: 100%;
+     line-height: 1.3;
+   }
 
   .dino-wrap{
     display: block;
     width: 100%;
-    position: relative;
   }
 
   .dino {
-    display: flex;
-    position: absolute;
+    display: inline-block;
+    max-width: 100%;
+  }
+
+}
+
+@media only screen and (min-width: 38em) {
+
+  html {
+    font-size: 110%;
+    line-height: 1.4;
+  }
+
+  .dino-wrap{
+    display: inline-block;
+    width: 100%;
+  }
+
+  .dino {
+    display: inline-block;
+  }
+}
+
+@media only screen and (min-width: 60em) {
+
+  html {
+    font-size: 120%;
+    line-height: 1.5;
+  }
+
+  .dino-wrap{
+    display: inline-block;
+    width: 100%;
+  }
+
+  .dino {
+    display: inline-block;
+  }
 }
