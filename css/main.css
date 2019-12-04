@@ -21,7 +21,6 @@ html {
 img {
   display: block;
   width: 100%;
-
 }
 
 body {
@@ -29,8 +28,8 @@ body {
 }
 
 .dino-wrap {
-  display: inline;
-  width: 100%;;
+  display: inline-block;
+  width: 100%;
 }
 
 .dino:nth-child(2) {
@@ -55,12 +54,12 @@ body {
   .dino-wrap {
     display: flex;
     flex-wrap: wrap;
-    flex-flow: row;
+    max-width: 25em;
   }
 
   .dino, .dino:nth-child(4), .dino:nth-child(2) {
-  width: 50%;
-  display: inline-block;
+    width: 50%;
+    display: inline-block;
   }
 
 }
@@ -74,12 +73,18 @@ body {
 
   .dino-wrap {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row;
     width: 100%;
+    max-width: 100%;
   }
 
   .dino {
-    width: 50%
+    width: 50%;
+    display: inline-block;
+  }
+
+  .dino:nth-child(1) {
+    display: none;
   }
 
 }
@@ -92,11 +97,16 @@ body {
   }
 
   .dino-wrap {
-    display: inline-block;
+    display: flex;
+    flex-flow: row;
     width: 100%;
   }
 
   .dino {
+    display: inline-block;
+  }
+
+  .dino:nth-child(1) {
     display: inline-block;
   }
 
